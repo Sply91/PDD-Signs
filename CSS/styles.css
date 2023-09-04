@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+}
+
+/* Div Selectors */
+
+.card {
+    width: 25vw;
+    height: 50vh;
+    background-color: #333333;
+}
+
+.caption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.label-warning {
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: #FF8A00;
+}
+
+/* Text selectors */
+
+.card-h2 {
+    color: white;
+    font-family: "Inter", Arial, sans-serif;
+}
