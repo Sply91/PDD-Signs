@@ -19,7 +19,7 @@ body {
     height: 450px;
     padding: 40px;
     box-sizing: border-box;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .caption {
@@ -58,5 +58,6 @@ p.label-warning {
     border-width: 1px;
     padding: 6px 16px;
     box-sizing: border-box;
+    margin: 0 auto 0 0;
 }
 
