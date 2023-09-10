@@ -1,25 +1,31 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    function getNumberOfColumns(element) {
-        const style = window.getComputedStyle(element);
-        const gridTemplateColumns = style.getPropertyValue('grid-template-columns');
-        return gridTemplateColumns.split(' ').length;
+document.addEventListener('DOMContentLoaded', function() {
+    var popupTriggers = document.querySelectorAll('.popup-trigger');
+    var popup = document.querySelector('.popup');
+  
+    for (var i = 0; i < popupTriggers.length; i++) {
+      popupTriggers[i].addEventListener('click', function() {
+        popup.style.display = 'flex';
+        centerPopup();
+      });
     }
-
-    const cardsContainer = document.querySelector('.cards');
-    if (cardsContainer) {
-        const numberOfColumns = getNumberOfColumns(cardsContainer);
-        console.log(numberOfColumns);
-
-        const menu = document.querySelector('.menu');
-
-        if (numberOfColumns <= 2) {
-            menu.classList.add('horizontal');
-            menu.classList.remove('vertical');
-        } else {
-            menu.classList.add('vertical');
-            menu.classList.remove('horizontal');
-        }
-    } else {
-        console.error('Element with class .cards not found');
+  
+    popup.addEventListener('click', function(event) {
+      if (event.target === popup) {
+        popup.style.display = 'none';
+      }
+    });
+  
+    function centerPopup() {
+      var windowHeight = window.innerHeight;
+      var popupHeight = popup.offsetHeight;
+      var topOffset = (windowHeight - popupHeight) / 2;
+      popup.style.top = topOffset + 'px';
     }
+  });
+
+window.addEventListener('DOMContentLoaded', function() {
+    var popup = document.getElementById('myPopup');
+    var screenHeight = window.innerHeight;
+    var popupHeight = screenHeight - 32;
+    popup.style.height = popupHeight + 'px';
 });
