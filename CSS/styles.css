@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    margin: 0;
 }
 
 .container {
@@ -8,10 +9,26 @@ body {
     height: 100vh;
 }
 
+.menu.horizontal {
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+}
+
+.menu.vertical {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+}
+
+.ic-menu {
+    margin: 10px 10px auto;
+}
+
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     flex-wrap: wrap;
+    grid-gap: 0;
 }
 
 .card:nth-child(2n) {
@@ -19,13 +36,9 @@ body {
 }
 
 .card:nth-child(2n+1) {
-    background-color: darkgray;
+    background-color: #0f0f0f;
 }
 
-.menu {
-    display: flex;
-    height: 100%;
-}
 
 .card {
     display: flex;
@@ -80,9 +93,10 @@ p.label-warning {
     display: inline-block
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 768px) { /* adjust 768px to the breakpoint you want */
     .container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 50px 1fr;
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+        height: auto;
     }
-  }
+}
