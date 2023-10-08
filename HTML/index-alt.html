@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваш сайт</title>
+    <link rel="stylesheet" href="file:///E:/Code/PDD-Signs/CSS/reset.css">
+    <link rel="stylesheet" href="file:///E:/Code/PDD-Signs/CSS/styles-alt.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <!-- Иконка меню -->
+            <div class="menu-icon">☰</div>
+            <!-- Подменю (столбец 2) -->
+            <div class="submenu">
+                <div class="submenu-header">Основные главы</div>
+                <div class="chapter">Глава 1</div>
+                <div class="chapter">Глава 2</div>
+                <div class="chapter">Глава 3</div>
+            </div>
+        </div>
+        <div class="main-content">
+            <!-- Контент (столбец 4) -->
+            <div class="article-content">
+                <!-- Текстовый контент -->
+                <h1>Заголовок</h1>
+                <h2>Подзаголовок</h2>
+                <p>Текст статьи...</p>
+                <blockquote>Цитата...</blockquote>
+                <p>Еще текст...</p>
+            </div>
+            <div class="visual-content">
+                <!-- Визуальный контент -->
+                <div class="card">
+                    <img src="image1.jpg" alt="Картинка 1">
+                    <h3>Заголовок карточки</h3>
+                    <p>Описание карточки...</p>
+                </div>
+                <div class="card">
+                    <img src="image2.jpg" alt="Картинка 2">
+                    <h3>Заголовок карточки</h3>
+                    <p>Описание карточки...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Генерируем рандомный цвет и присваиваем его элементам
+        const randomColor = () => {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        };
+
+        const elementsToColor = document.querySelectorAll('.random-color');
+        elementsToColor.forEach(element => {
+            element.style.backgroundColor = randomColor();
+            element.style.color = randomColor();
+        });
+    </script>
+</body>
+</html>

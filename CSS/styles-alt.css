@@ -1,0 +1,64 @@
+/* Стили для основного контейнера и его детей */
+.wrapper {
+    display: grid;
+    grid-template-columns: 50px auto; /* Два столбца: левый и правый */
+    grid-template-rows: 1fr; /* Одна строка, высота рассчитывается автоматически */
+    height: 100vh; /* Высота контейнера на всю высоту окна браузера */
+}
+
+.sidebar {
+    background-color: #1f77b4; /* Синий цвет */
+    color: #fff; /* Белый цвет */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-icon {
+    cursor: pointer;
+    background-color: #2ca02c; /* Зеленый цвет */
+    color: #fff; /* Белый цвет */
+}
+
+.submenu {
+    display: none; /* По умолчанию скрыто */
+    padding: 10px;
+    background-color: #d62728; /* Красный цвет */
+}
+
+.chapter {
+    cursor: pointer;
+    margin: 5px 0;
+    color: #9467bd; /* Фиолетовый цвет */
+}
+
+.main-content {
+    background-color: #ff7f0e; /* Оранжевый цвет */
+    color: #fff; /* Белый цвет */
+    padding: 20px;
+    overflow: auto; /* Добавим прокрутку, если контент слишком большой */
+}
+
+/* Стили для визуального контента (карточек) */
+.visual-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #17becf; /* Голубой цвет */
+    padding: 10px;
+    margin: 10px;
+    width: calc(33.33% - 20px); /* Равномерное распределение на 3 столбца */
+    box-sizing: border-box;
+    background-color: #e377c2; /* Розовый цвет */
+    color: #fff; /* Белый цвет */
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
